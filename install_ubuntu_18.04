@@ -1,1 +1,21 @@
+https://www.digitalocean.com/community/tutorials/como-configurar-las-llaves-ssh-en-ubuntu-18-04-es
+install ssh?: apt install openssh-server
+check it: systemctl status ssh
+connect: ssh username@ip/name_server
+To change name server: nano /etc/hosts and hostnamectl set-hostname
+Possible problems check root conection /etc/ssh/sshd_config
+--------
 
+cd .ssh
+ssh-keygen
+cd 
+ssh-add .ssh/id_rsa
+https://askubuntu.com/questions/115151/how-to-set-up-passwordless-ssh-access-for-root-user
+https://www.linode.com/docs/security/authentication/use-public-key-authentication-with-ssh/
+--------
+
+install Ansible: add-apt-repository ppa:ansible/ansible
+                 apt update
+                 apt install ansible
+                 
+inventary: nano /etc/ansible/hosts ,and also add user
